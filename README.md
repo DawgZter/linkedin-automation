@@ -10,7 +10,7 @@ Install the plugin in Claude, then ask:
 connect my LinkedIn account
 ```
 
-Claude will open the hosted LinkedIn login, complete the connector authentication, and confirm when LinkedIn is connected.
+Claude will create a hosted LinkedIn login link, keep checking the connection, and confirm when LinkedIn is connected.
 
 ## Components
 
