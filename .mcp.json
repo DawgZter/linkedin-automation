@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "linkedin-automation": {
+      "type": "http",
+      "url": "https://unipile-hosted-auth-callback.vercel.app/api/linkedin-automation-mcp/mcp"
+    }
+  }
+}
