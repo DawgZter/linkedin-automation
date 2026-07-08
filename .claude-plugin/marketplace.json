@@ -1,0 +1,24 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "linkedin-automation",
+  "metadata": {
+    "description": "LinkedIn automation plugin for Claude."
+  },
+  "owner": {
+    "name": "Karim"
+  },
+  "plugins": [
+    {
+      "name": "linkedin-automation",
+      "description": "Connect LinkedIn and use LinkedIn automation tools through Claude.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Karim"
+      },
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/DawgZter/linkedin-automation",
+      "tags": ["linkedin", "automation", "mcp", "sales"]
+    }
+  ]
+}
