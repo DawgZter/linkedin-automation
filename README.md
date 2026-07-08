@@ -11,6 +11,7 @@ connect my LinkedIn account
 ```
 
 Claude will create a hosted LinkedIn login link, keep checking the connection, and confirm when LinkedIn is connected.
+Future sessions reuse that connection automatically.
 
 ## Components
 
