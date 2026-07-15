@@ -31,12 +31,27 @@ function parseJsonString(value) {
   }
 }
 
+function isLoginUrl(value) {
+  if (typeof value !== "string") return false;
+
+  try {
+    const url = new URL(value);
+    if (url.origin === "https://auth.unipile.com") return true;
+    return (
+      url.origin === "https://unipile-hosted-auth-callback.vercel.app" &&
+      url.pathname === "/connect/linkedin"
+    );
+  } catch {
+    return false;
+  }
+}
+
 function extractLoginUrl(input) {
   let loginUrl;
 
   function inspect(value) {
     if (typeof value === "string") {
-      if (!loginUrl && value.startsWith("https://auth.unipile.com/")) {
+      if (!loginUrl && isLoginUrl(value)) {
         loginUrl = value;
       }
 
@@ -46,7 +61,7 @@ function extractLoginUrl(input) {
     }
 
     if (!value || typeof value !== "object" || Array.isArray(value)) return;
-    if (!loginUrl && typeof value.login_url === "string") {
+    if (!loginUrl && isLoginUrl(value.login_url)) {
       loginUrl = value.login_url;
     }
   }
