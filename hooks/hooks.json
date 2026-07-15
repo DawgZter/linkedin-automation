@@ -2,6 +2,15 @@
   "hooks": {
     "PostToolUse": [
       {
+        "matcher": "mcp__(plugin_linkedin-automation_linkedin-automation|linkedin-automation)__linkedin_connect",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/open-login.js\""
+          }
+        ]
+      },
+      {
         "matcher": "mcp__(plugin_linkedin-automation_linkedin-automation|linkedin-automation)__linkedin_connect_status",
         "hooks": [
           {
