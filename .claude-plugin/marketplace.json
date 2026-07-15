@@ -11,7 +11,7 @@
     {
       "name": "linkedin-automation",
       "description": "Connect LinkedIn and use LinkedIn automation tools through Claude.",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "author": {
         "name": "Karim"
       },

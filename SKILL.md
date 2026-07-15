@@ -9,6 +9,7 @@ Use the plugin-provided `linkedin-automation` MCP connector.
 
 1. Call `linkedin_connection_status`.
 2. When the status is `not_connected`, call `linkedin_connect`.
-3. Present the returned `login_url` for the hosted LinkedIn login, then stay active while the user completes it.
-4. Call `linkedin_connect_status` with the returned `session_id`. Keep checking every short interval until it reports `connected`.
-5. When the status call succeeds, reply with: `LinkedIn's connected.`
+3. Present the returned `login_url` and keep the returned `session_id`.
+4. Start the status loop immediately by calling `linkedin_connect_status` with that `session_id`.
+5. Keep calling `linkedin_connect_status` every short interval until it reports `connected`.
+6. When the status call succeeds, reply with: `LinkedIn's connected.`
