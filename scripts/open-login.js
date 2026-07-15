@@ -36,11 +36,7 @@ function isLoginUrl(value) {
 
   try {
     const url = new URL(value);
-    if (url.origin === "https://auth.unipile.com") return true;
-    return (
-      url.origin === "https://unipile-hosted-auth-callback.vercel.app" &&
-      url.pathname === "/connect/linkedin"
-    );
+    return url.origin === "https://auth.unipile.com";
   } catch {
     return false;
   }
