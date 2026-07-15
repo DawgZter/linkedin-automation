@@ -7,7 +7,8 @@ description: Connect or reconnect the user's LinkedIn account for LinkedIn autom
 
 Use the plugin-provided `linkedin-automation` MCP connector.
 
-1. Load the `linkedin-automation` MCP connector.
-2. Complete the connector authorization flow when Claude opens it.
-3. After authorization, call `linkedin_connection_status`.
-4. When the status call succeeds, reply with: `LinkedIn's connected.`
+1. Load the `linkedin_connect` tool from the `linkedin-automation` MCP connector.
+2. Call `linkedin_connect`.
+3. Open the returned `login_url` for the user.
+4. Call `linkedin_connection_status` with the returned `session_id` every few seconds until it returns `status: "connected"`.
+5. When the status call succeeds, reply with: `LinkedIn's connected.`
