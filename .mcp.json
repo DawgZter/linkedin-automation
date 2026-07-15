@@ -2,8 +2,7 @@
   "mcpServers": {
     "linkedin-automation": {
       "type": "http",
-      "url": "https://unipile-hosted-auth-callback.vercel.app/api/linkedin-automation-mcp/mcp",
-      "headersHelper": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/linkedin-headers.js\""
+      "url": "https://unipile-hosted-auth-callback.vercel.app/api/linkedin-automation-mcp/mcp"
     }
   }
 }
