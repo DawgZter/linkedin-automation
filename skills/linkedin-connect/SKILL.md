@@ -11,4 +11,7 @@ Use the plugin-provided `linkedin-automation` MCP connector.
 2. Call `linkedin_connect`.
 3. Open the returned `login_url` for the user.
 4. Call `linkedin_connection_status` with the returned `session_id` every few seconds until it returns `status: "connected"`.
-5. When the status call succeeds, reply with: `LinkedIn's connected.`
+5. Keep the returned `connection_session_id` for later LinkedIn automation tool calls in this conversation.
+6. When the status call succeeds, reply with: `LinkedIn's connected.`
+
+For LinkedIn automation tools used after connection, include the saved `connection_session_id` whenever the tool accepts it.
