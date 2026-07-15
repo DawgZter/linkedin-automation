@@ -1,12 +1,9 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "linkedin-automation",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Connect LinkedIn and use LinkedIn automation tools through Claude.",
   "author": {
     "name": "Karim Yahia"
-  },
-  "skills": [
-    "./"
-  ]
+  }
 }
