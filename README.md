@@ -1,6 +1,6 @@
 # LinkedIn Automation
 
-A Claude plugin that connects LinkedIn through a hosted login flow and exposes a scoped `linkedin-automation` MCP connector.
+A Claude plugin that connects each rep to a private, scoped `linkedin-automation` MCP connector.
 
 ## Use
 
@@ -10,13 +10,13 @@ Install the plugin in Claude, then ask:
 connect my LinkedIn account
 ```
 
-Claude will create a hosted LinkedIn login link, keep checking the connection, and confirm when LinkedIn is connected.
-Once connected, the MCP session uses that LinkedIn account automatically.
-The server scopes every LinkedIn action to the account returned by the hosted login.
+Claude will authorize the connector with the rep's work Google account. Existing reps are connected to their saved LinkedIn account immediately; a new rep completes LinkedIn sign-in once.
+
+The authorization persists across Claude threads, and every LinkedIn action is scoped to that rep's account.
 
 ## Components
 
 - `linkedin-connect` skill in `skills/linkedin-connect`
 - `linkedin-automation` remote MCP connector
 
-The connector URL is static. Each user's LinkedIn account is bound during the hosted login flow.
+The connector URL is static. Each rep's Google identity is privately bound to one LinkedIn account.
